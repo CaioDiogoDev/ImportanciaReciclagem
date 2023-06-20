@@ -11,8 +11,17 @@ document.getElementById('cadastroForm').addEventListener('submit', function(even
         var listaDicas = document.getElementById('listaDicas');
 
         var novoItem = document.createElement('div');
-        novoItem.textContent = dica;
-        novoItem.classList.add(material);
+        novoItem.classList.add('dica-item');
+
+        var textoDica = document.createElement('span');
+        textoDica.textContent = dica;
+        novoItem.appendChild(textoDica);
+
+        var removerButton = document.createElement('button');
+        removerButton.textContent = 'Remover';
+        removerButton.classList.add('remover-button');
+        novoItem.appendChild(removerButton);
+
         listaDicas.appendChild(novoItem);
 
         materialSelect.value = 'plastico';
@@ -23,30 +32,46 @@ document.getElementById('cadastroForm').addEventListener('submit', function(even
         dicasArmazenadas.push({ material: material, dica: dica });
         localStorage.setItem('dicas', JSON.stringify(dicasArmazenadas));
     }
+
 });
 
 
 document.getElementById('filtroButton').addEventListener('click', function() {
     var filtroInput = document.getElementById('filtroInput').value.toLowerCase();
     var listaDicas = document.getElementById('listaDicas');
+    var materialEncontrado = false;
+
+    if (filtroInput === '') {
+        alert('Informe um material a ser pesquisado.');
+        return;
+    }
 
     for (var i = 0; i < listaDicas.children.length; i++) {
         var dica = listaDicas.children[i];
         var material = dica.classList[0].toLowerCase();
 
-        if (material === filtroInput || filtroInput === '') {
+        if (material === filtroInput) {
             dica.style.display = 'block';
+            materialEncontrado = true;
         } else {
             dica.style.display = 'none';
         }
     }
-});
 
-document.getElementById('listaDicas').addEventListener('click', function(event) {
-    if (event.target && event.target.nodeName === 'DIV') {
-        event.target.remove();
+    if (!materialEncontrado) {
+        alert('Material não encontrado.');
     }
 });
+
+var listaDicas = document.getElementById('listaDicas');
+
+listaDicas.addEventListener('click', function(event) {
+    if (event.target && event.target.classList.contains('remover-button')) {
+        var divItem = event.target.parentNode;
+        divItem.remove();
+    }
+});
+
 
 var coletaButton = document.getElementById('coletaButton');
 var horariosColeta = document.getElementById('horariosColeta');

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Importancia da Reciclagem</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <h1>Cadastro de Dicas de Reciclagem</h1>
+
+    <form id="cadastroForm">
+        <label for="materialSelect">Material:</label>
+        <select id="materialSelect">
+    <option value="plastico">Plástico</option>
+    <option value="metal">Metal</option>
+    <option value="papel">Papel</option>
+    <option value="vidro">Vidro</option>
+    <option value="organico">Orgânico</option>
+  </select>
+
+        <label for="dicaInput">Dica:</label>
+        <textarea id="dicaInput" rows="1"></textarea>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <h2>Lista de Dicas Cadastradas</h2>
+
+    <div id="listaDicas"></div>
+
+    <h2>Filtrar Dicas por Material</h2>
+
+    <label for="filtroInput">Digite o material:</label>
+    <input type="text" id="filtroInput">
+    <button id="filtroButton">Filtrar</button>
+
+    <h2>Horários de Coleta por Bairro</h2>
+
+    <button id="coletaButton">Ver Horários de Coleta</button>
+    <div id="horariosColeta"></div>
+    <span>Para mais informações <a href="http://www.cmcp.pr.gov.br/post/256/coleta-de-lixo" target="_blank">clique aqui</a></span>
+
+    <script src="js/main.js"></script>
+</body>

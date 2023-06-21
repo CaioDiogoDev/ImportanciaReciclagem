@@ -22,6 +22,19 @@ document.getElementById('cadastroForm').addEventListener('submit', function(even
         removerButton.classList.add('remover-button');
         novoItem.appendChild(removerButton);
 
+        // Adicionar classe de cor com base no material
+        if (material === 'plastico') {
+            novoItem.classList.add('plastico');
+        } else if (material === 'metal') {
+            novoItem.classList.add('metal');
+        } else if (material === 'papel') {
+            novoItem.classList.add('papel');
+        } else if (material === 'vidro') {
+            novoItem.classList.add('vidro');
+        } else if (material === 'organico') {
+            novoItem.classList.add('organico');
+        }
+
         listaDicas.appendChild(novoItem);
 
         materialSelect.value = 'plastico';
@@ -32,8 +45,8 @@ document.getElementById('cadastroForm').addEventListener('submit', function(even
         dicasArmazenadas.push({ material: material, dica: dica });
         localStorage.setItem('dicas', JSON.stringify(dicasArmazenadas));
     }
-
 });
+
 
 
 document.getElementById('filtroButton').addEventListener('click', function() {

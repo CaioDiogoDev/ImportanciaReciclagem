@@ -7,26 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Importancia da Reciclagem</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
     <h1>Cadastro de Dicas de Reciclagem</h1>
+    <div>
+        <form id="cadastroForm">
+            <label for="materialSelect">Selecione o material:</label>
+            <select id="materialSelect">
+            <option value="plastico">Plástico</option>
+            <option value="metal">Metal</option>
+            <option value="papel">Papel</option>
+            <option value="vidro">Vidro</option>
+            <option value="organico">Orgânico</option>
+        </select>
 
-    <form id="cadastroForm">
-        <label for="materialSelect">Selecione o material:</label>
-        <select id="materialSelect">
-    <option value="plastico">Plástico</option>
-    <option value="metal">Metal</option>
-    <option value="papel">Papel</option>
-    <option value="vidro">Vidro</option>
-    <option value="organico">Orgânico</option>
-  </select>
+            <label for="dicaInput">Dica:</label>
+            <textarea id="dicaInput" rows="1"></textarea>
+            <button class="cadastrar" type="submit">Cadastrar</button>
+        </form>
+    </div>
 
-        <label for="dicaInput">Dica:</label>
-        <textarea id="dicaInput" rows="1"></textarea>
-        <button class="cadastrar" type="submit">Cadastrar</button>
-    </form>
 
     <h2>Lista de Dicas Cadastradas</h2>
 

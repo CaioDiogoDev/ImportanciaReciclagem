@@ -51,7 +51,6 @@ document.getElementById('cadastroForm').addEventListener('submit', function(even
 });
 
 // Filtro dicas cadastradas 
-debugger;
 document.getElementById('filtroButton').addEventListener('click', function() {
     var filtroInput = document.querySelector('#filtroInput').value.toLowerCase();
     var listaDicas = document.getElementById('listaDicas');

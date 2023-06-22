@@ -1,6 +1,7 @@
 # ImportanciaReciclagem
 
 Esse codigo foi desenvolvido para atender ao Projeto 2 da disciplina de Programaço web front-end.  
+Codigo JavaScript todo comentado para falicitar a comunicação da equipe e a codificação. 
 
 
 # Requisitos funcionais mais regras de negocio  implementados na aplicação. 

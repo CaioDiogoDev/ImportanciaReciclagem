@@ -44,6 +44,9 @@ document.getElementById('cadastroForm').addEventListener('submit', function(even
         var dicasArmazenadas = JSON.parse(localStorage.getItem('dicas')) || [];
         dicasArmazenadas.push({ material: material, dica: dica });
         localStorage.setItem('dicas', JSON.stringify(dicasArmazenadas));
+    } else {
+        alert('Campo vazio, por favor insira a dica para ser cadastrada.');
+        return;
     }
 });
 

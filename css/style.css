@@ -78,6 +78,12 @@ button {
 
 #listaDicas {
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+span {
+    margin-bottom: 10px;
 }
 
 #filtroButton {

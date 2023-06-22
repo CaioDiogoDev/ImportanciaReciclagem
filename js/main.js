@@ -2,7 +2,7 @@ document.getElementById('cadastroForm').addEventListener('submit', function(even
     event.preventDefault();
 
     var materialSelect = document.getElementById('materialSelect');
-    var dicaInput = document.getElementById('dicaInput');
+    var dicaInput = document.querySelector('.filtroInput');
 
     var material = materialSelect.value;
     var dica = dicaInput.value;
@@ -50,10 +50,10 @@ document.getElementById('cadastroForm').addEventListener('submit', function(even
     }
 });
 
-
-// Metodo para Filtrar os intens 
+// Filtro dicas cadastradas 
+debugger;
 document.getElementById('filtroButton').addEventListener('click', function() {
-    var filtroInput = document.getElementById('filtroInput').value.toLowerCase();
+    var filtroInput = document.querySelector('#filtroInput').value.toLowerCase();
     var listaDicas = document.getElementById('listaDicas');
     var materialEncontrado = false;
 
@@ -87,8 +87,7 @@ document.getElementById('filtroButton').addEventListener('click', function() {
     }
 });
 
-// Metodo para remover os itens 
-
+// Método para remover os itens
 var listaDicas = document.getElementById('listaDicas');
 
 listaDicas.addEventListener('click', function(event) {
@@ -108,9 +107,7 @@ listaDicas.addEventListener('click', function(event) {
     }
 });
 
-
-
-// Metodo para o botão mostar coloca nos bairros
+// Método para o botão mostrar coleta nos bairros
 var coletaButton = document.getElementById('coletaButton');
 var horariosColeta = document.getElementById('horariosColeta');
 var menuAberto = false;
@@ -121,21 +118,26 @@ coletaButton.addEventListener('click', function() {
         menuAberto = false;
     } else {
         var bairros = [{
-            nome: 'Câmpus Universitários',
-            horarios: ['Segunda-feira', 'Quinta-feira', 'Sexta-feira']
-        }, {
-            nome: 'Alvorada',
-            horarios: ['Terça-feira', 'Quinta-feira', 'Sábado']
-        }, {
-            nome: 'Ayrtol Senna',
-            horarios: ['Segunda-feira', 'Quinta-feira', 'Sexta-feira']
-        }, {
-            nome: 'Varotto',
-            horarios: ['Terça-feira', 'Quinta-feira', 'Sábado']
-        }, {
-            nome: 'Porto Belo',
-            horarios: ['Segunda-feira', 'Quinta-feira', 'Sexta-feira']
-        }];
+                nome: 'Câmpus Universitários',
+                horarios: ['Segunda-feira', 'Quinta-feira', 'Sexta-feira']
+            },
+            {
+                nome: 'Alvorada',
+                horarios: ['Terça-feira', 'Quinta-feira', 'Sábado']
+            },
+            {
+                nome: 'Ayrtol Senna',
+                horarios: ['Segunda-feira', 'Quinta-feira', 'Sexta-feira']
+            },
+            {
+                nome: 'Varotto',
+                horarios: ['Terça-feira', 'Quinta-feira', 'Sábado']
+            },
+            {
+                nome: 'Porto Belo',
+                horarios: ['Segunda-feira', 'Quinta-feira', 'Sexta-feira']
+            }
+        ];
 
         for (var i = 0; i < bairros.length; i++) {
             var bairro = bairros[i];

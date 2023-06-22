@@ -7,52 +7,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Importancia da Reciclagem</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
-    <h1>Cadastro de Dicas de Reciclagem</h1>
-    <div>
+    <h2>Cadastro de Dicas de Reciclagem</h2>
+
+    <div style="width: 500px;">
         <form id="cadastroForm">
-            <label for="materialSelect">Selecione o material:</label>
-            <select id="materialSelect">
-            <option value="plastico">Plástico</option>
-            <option value="metal">Metal</option>
-            <option value="papel">Papel</option>
-            <option value="vidro">Vidro</option>
-            <option value="organico">Orgânico</option>
-        </select>
-
-            <label for="dicaInput">Dica:</label>
-            <textarea id="dicaInput" rows="1"></textarea>
-            <button class="cadastrar" type="submit">Cadastrar</button>
+            <div class="contentForm">
+                <div class="inputRender">
+                    <span class="spanTitle" for="materialSelect">Selecione o material:</span><br>
+                    <select id="materialSelect">
+                        <option class="optionMaterial" value="plastico">Plástico</option>
+                        <option class="optionMaterial" value="metal">Metal</option>
+                        <option class="optionMaterial" value="papel">Papel</option>
+                        <option class="optionMaterial" value="vidro">Vidro</option>
+                        <option class="optionMaterial" value="organico">Orgânico</option>
+                    </select>
+                </div>
+                <div class="inputRender">
+                    <span class="spanTitle" for="dicaInput">Dica:</span><br>
+                    <input placeholder="Digite a dica" type="text" class="filtroInput" rows="1" />
+                </div>
+            </div>
+            <div class="buttonContainer">
+                <button class="buttonStyled" type="submit">Cadastrar</button>
+            </div>
         </form>
-    </div>
-
-
-    <h2>Lista de Dicas Cadastradas</h2>
-
-    <div id="listaDicas">
-        <span class="plastico">Limpar embalagens de molho e de produtos de limpeza.</span>
-        <span class="metal">Venda para sucateiros: Se você tiver uma grande quantidade de metal para reciclar, considere entrar em 
-                            contato com sucateiros locais. Eles geralmente compram metais recicláveis e podem oferecer um preço justo pelo material.</span>
-        <span class="papel">Limpe janelas com jornal.</span>
-        <span class="vidro">Não quebre o vidro: Ao contrário do que se possa pensar, não é necessário quebrar as embalagens de vidro antes de reciclá-las. 
-            Na verdade, é preferível que o vidro seja reciclado em sua forma intacta. Se você tem vidro quebrado, 
-            coloque-o em um recipiente seguro e bem fechado para evitar acidentes e descarte-o corretamente.</span>
-        <span class="organico">Compostagem: A compostagem é uma ótima maneira de reciclar resíduos orgânicos, como restos de alimentos, cascas de frutas e vegetais, borra de café, entre outros. Crie uma pilha de compostagem em sua casa ou verifique se há programas de compostagem comunitária em sua região.</span>
     </div>
 
     <h2>Filtrar Dicas por Material</h2>
 
-    <label for="filtroInput">Digite o material:</label>
-    <input type="text" id="filtroInput">
-    <button id="filtroButton">Filtrar</button>
+    <div style="width: 500px;">
+        <div class="contentForm">
+            <div class="inputRender">
+                <span class="spanTitle" for="filtroInput">Digite o material:</span><br>
+                <input placeholder="Digite o material " type="text" id="filtroInput" class="filtroInput">
+                <button class="buttonStyledFilter" id="filtroButton">Filtrar</button>
+            </div>
+        </div>
+    </div>
+
+    <h2>Lista de Dicas Cadastradas</h2>
+
+    <div class="contentForm">
+        <div class="inputRender">
+            <div id="listaDicas"></div>
+        </div>
+    </div>
+
 
     <h2>Horários de Coleta por Bairro</h2>
 
-    <button id="coletaButton">Ver Horários de Coleta</button>
-    <div id="horariosColeta"></div>
-    <span>Para mais informações <a href="http://www.cmcp.pr.gov.br/post/256/coleta-de-lixo" target="_blank">clique aqui</a></span>
+    <div>
+        <div class="buttonContainer">
+            <button class="buttonStyled" id="coletaButton">Ver Horários de Coleta</button>
+        </div>
+        <div id="horariosColeta"></div>
+        <span id="information">Para mais informações <a href="http://www.cmcp.pr.gov.br/post/256/coleta-de-lixo" target="_blank">clique aqui</a></span>
+    </div>
 
     <script src="js/main.js"></script>
 </body>

@@ -1,5 +1,5 @@
 * {
-    background-color: #FBEAFF;
+    background-color: #0a010c;
 }
 
 .plastico {
@@ -73,7 +73,7 @@ label {
 }
 
 .spanTitle {
-    color: #737179;
+    color: white;
     font-weight: bold;
 }
 
@@ -84,6 +84,7 @@ label {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 15px;
+    color: white;
 }
 
 .filtroInput {
@@ -134,7 +135,7 @@ label {
 }
 
 #information {
-    color: #453c68;
+    color: white
 }
 
 .cadastrar {
@@ -175,4 +176,8 @@ label {
 .dica-item button.remover-button {
     margin-left: 10px;
     width: 100px;
+}
+
+p {
+    color: white;
 }
